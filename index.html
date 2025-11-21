@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Debbie Devine Therapy</title>
+    <meta
+      name="description"
+      content="Landing page for Debbie Devine, therapist providing compassionate, evidence‑based counseling services."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="branding">
+          <span class="logo-mark">DD</span>
+          <div class="brand-text">
+            <span class="brand-name">Debbie Devine</span>
+            <span class="brand-tagline">Therapy &amp; Counseling</span>
+          </div>
+        </div>
+        <nav class="main-nav" aria-label="Primary navigation">
+          <a href="#about" class="nav-link">About</a>
+          <a href="#approach" class="nav-link">Approach</a>
+          <a href="#services" class="nav-link">Services</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero / Intro -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero-inner">
+          <div class="hero-text-box">
+            <h1 id="hero-title">Therapy that meets you where you are.</h1>
+            <p class="hero-intro">
+              This is a short intro area where Debbie can warmly welcome visitors,
+              describe who she works with, and offer a sense of what it feels like
+              to sit in the room together.
+            </p>
+            <div class="hero-actions">
+              <a href="#contact" class="btn primary-btn">Schedule a consultation</a>
+              <a href="#services" class="btn ghost-btn">Explore services</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pop‑out information sections -->
+      <section class="info-section" aria-label="More information about working with Debbie">
+        <div class="container">
+          <h2 class="section-title">Learn more about working together</h2>
+          <p class="section-intro">
+            Click on each card below to expand and read more details. These
+            sections can be customized later with Debbie’s exact wording.
+          </p>
+
+          <div class="info-grid">
+            <!-- About Debbie -->
+            <details class="info-card" id="about">
+              <summary>
+                <h3>About Debbie</h3>
+                <p class="summary-line">Background, training, and what brings her to this work.</p>
+              </summary>
+              <div class="info-body">
+                <p>
+                  This is placeholder text for Debbie’s bio. You can describe
+                  professional experience, areas of focus, and a bit of personal
+                  context that helps clients know who they’ll be meeting.
+                </p>
+              </div>
+            </details>
+
+            <!-- Approach -->
+            <details class="info-card" id="approach">
+              <summary>
+                <h3>Therapeutic approach</h3>
+                <p class="summary-line">How sessions feel, and what you can expect.</p>
+              </summary>
+              <div class="info-body">
+                <p>
+                  Use this area to talk about modalities (for example, CBT,
+                  psychodynamic, somatic, trauma-informed) and how Debbie
+                  collaboratively works with clients.
+                </p>
+              </div>
+            </details>
+
+            <!-- Services -->
+            <details class="info-card" id="services">
+              <summary>
+                <h3>Services &amp; specialities</h3>
+                <p class="summary-line">Who she works with and common concerns.</p>
+              </summary>
+              <div class="info-body">
+                <ul>
+                  <li>Individual therapy for adults and teens</li>
+                  <li>Support for grief, trauma, anxiety, and life transitions</li>
+                  <li>In-person and telehealth options</li>
+                </ul>
+                <p>
+                  All of this is placeholder content that can be swapped for
+                  Debbie’s real offerings.
+                </p>
+              </div>
+            </details>
+
+            <!-- Practicalities -->
+            <details class="info-card" id="logistics">
+              <summary>
+                <h3>Fees, insurance &amp; logistics</h3>
+                <p class="summary-line">Session length, payment, and location details.</p>
+              </summary>
+              <div class="info-body">
+                <p>
+                  Outline standard session length, fee ranges, sliding-scale
+                  options, and whether you provide superbills for
+                  out-of-network insurance reimbursement.
+                </p>
+              </div>
+            </details>
+
+            <!-- Getting started -->
+            <details class="info-card" id="getting-started">
+              <summary>
+                <h3>Getting started</h3>
+                <p class="summary-line">What happens between first contact and first session.</p>
+              </summary>
+              <div class="info-body">
+                <p>
+                  Describe how to reach out, what a consultation call looks
+                  like, and how clients can prepare for their first
+                  appointment.
+                </p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact strip -->
+      <section id="contact" class="contact-section" aria-labelledby="contact-heading">
+        <div class="container contact-inner">
+          <div>
+            <h2 id="contact-heading">Ready to take the next step?</h2>
+            <p class="contact-text">
+              Add Debbie’s preferred contact info here (phone, secure email,
+              client portal link). This can also link to any external
+              scheduling system.
+            </p>
+          </div>
+          <div class="contact-details">
+            <p class="contact-line"><strong>Phone:</strong> (555) 555-5555</p>
+            <p class="contact-line"><strong>Email:</strong> debbie@example.com</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>&copy; <span id="year"></span> Debbie Devine Therapy. All rights reserved.</p>
+        <p class="footer-small">This is a draft layout and placeholder content that can be edited at any time.</p>
+      </div>
+      <script>
+        // Simple helper to always show the current year in the footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+      </script>
+    </footer>
+  </body>
+</html>
