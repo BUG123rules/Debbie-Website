@@ -274,7 +274,7 @@ main {
   width: 100%;
 }
 
-/* ---- Framed photo (used for Debbie portrait & nature image) ---- */
+/* ---- Framed photo (portrait & nature) ---- */
 .framed-photo {
   position: relative;
   border-radius: 22px;
@@ -290,7 +290,6 @@ main {
   border-radius: inherit;
 }
 
-/* subtle tweaks for specific uses if needed */
 .framed-photo--portrait {
   max-width: 260px;
 }
@@ -443,22 +442,9 @@ main {
   text-underline-offset: 3px;
 }
 
-/* keep some spacing on the button in tighter layouts */
+/* desktop default: keep label on one line */
 .consult-cta {
   white-space: nowrap;
-}
-
-/* stack nicely on small screens */
-@media (max-width: 600px) {
-  .consult-contact-row {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .consult-cta {
-    width: 100%;
-    justify-content: center;
-  }
 }
 
 /* ---- Buttons ---- */
@@ -669,6 +655,27 @@ main {
 
   .contact-inner {
     flex-direction: column;
+  }
+}
+
+/* MOBILE BUTTON FIX */
+@media (max-width: 600px) {
+  /* Allow button label to wrap and be readable */
+  .btn {
+    font-size: 0.9rem;
+    padding: 0.7rem 1.4rem;
+  }
+
+  .consult-contact-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .consult-cta {
+    white-space: normal;      /* allow wrapping */
+    width: 100%;              /* full width button */
+    justify-content: center;  /* center the text */
+    text-align: center;
   }
 }
 
