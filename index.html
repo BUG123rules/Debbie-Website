@@ -6,168 +6,310 @@
     <title>Debbie Devine Therapy</title>
     <meta
       name="description"
-      content="Landing page for Debbie Devine, therapist providing compassionate, evidence‑based counseling services."
+      content="Landing page for Debbie Devine, therapist providing compassionate, evidence-based counseling services."
     />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Procedural background canvas -->
+    <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
     <header class="site-header">
       <div class="container header-inner">
-        <div class="branding">
-          <span class="logo-mark">DD</span>
-          <div class="brand-text">
-            <span class="brand-name">Debbie Devine</span>
-            <span class="brand-tagline">Therapy &amp; Counseling</span>
+        <div class="header-identity">
+          <span class="logo-mark" aria-hidden="true">DD</span>
+          <div class="header-text">
+            <p class="header-name">Debbie Devine</p>
+            <p class="header-tagline">Therapy &amp; Counseling</p>
           </div>
         </div>
         <nav class="main-nav" aria-label="Primary navigation">
-          <a href="#about" class="nav-link">About</a>
-          <a href="#approach" class="nav-link">Approach</a>
-          <a href="#services" class="nav-link">Services</a>
+          <a href="#welcome" class="nav-link" aria-current="page">Welcome</a>
+          <a href="#training" class="nav-link">Training</a>
+          <a href="#consult" class="nav-link">Consultation &amp; Fees</a>
+          <a href="#testimonials" class="nav-link">Testimonials</a>
           <a href="#contact" class="nav-link">Contact</a>
         </nav>
       </div>
     </header>
 
     <main>
-      <!-- Hero / Intro -->
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="container hero-inner">
-          <div class="hero-text-box">
-            <h1 id="hero-title">Therapy that meets you where you are.</h1>
-            <p class="hero-intro">
-              This is a short intro area where Debbie can warmly welcome visitors,
-              describe who she works with, and offer a sense of what it feels like
-              to sit in the room together.
-            </p>
-            <div class="hero-actions">
-              <a href="#contact" class="btn primary-btn">Schedule a consultation</a>
-              <a href="#services" class="btn ghost-btn">Explore services</a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <!-- Welcome text directly under header -->
+      <section class="welcome-section" id="welcome">
+        <div class="container welcome-inner">
+          <h1 class="welcome-title">Welcome</h1>
 
-      <!-- Pop‑out information sections -->
-      <section class="info-section" aria-label="More information about working with Debbie">
-        <div class="container">
-          <h2 class="section-title">Learn more about working together</h2>
-          <p class="section-intro">
-            Click on each card below to expand and read more details. These
-            sections can be customized later with Debbie’s exact wording.
+          <p>
+            Hi and I’m glad you landed on this page. Sometimes, the only thing harder than reaching out for support is nothing.
           </p>
 
-          <div class="info-grid">
-            <!-- About Debbie -->
-            <details class="info-card" id="about">
-              <summary>
-                <h3>About Debbie</h3>
-                <p class="summary-line">Background, training, and what brings her to this work.</p>
-              </summary>
-              <div class="info-body">
+          <p>
+            What I mean is that it can take enormous courage to reach out and if you are here, you may be considering support for yourself or someone you want to refer to for trustworthy care.
+          </p>
+
+          <p>
+            I welcome you to meet with me for a brief 15 minutes or so online to see how you feel about working together-no charge.
+          </p>
+
+          <p>
+            I can be helpful, particularly if you are a helper too. I see nurses, teachers, therapists, creatives, caregivers and many others.
+          </p>
+
+          <p>
+            We can work with all sorts of issues together like relationship concerns, boundaries, compassion fatigue, life transitions, past trauma, creative expression, and I have some pretty wonderful training in supporting folks with eating and body image issues as well.
+          </p>
+
+          <p>
+            Maybe you don’t see your issue listed here. Let’s chat and I will tell you honestly if it is something I am qualified to support you with. I enthusiastically welcome all genders, sexualities and body sizes. I am curious about you and what brings you and I welcome the opportunity to see things from where you are and will actively learn with you as you become more healed and whole in your own process.
+          </p>
+        </div>
+      </section>
+
+      <!-- Training section -->
+      <section class="training-section" id="training">
+        <div class="container training-inner">
+          <h2 class="section-heading">Training</h2>
+
+          <p>
+            I am trained by the IFS institute in IFS therapy and will be trained in EMDR in the beginning of 2026. I have worked relationally and client centered focus since 2008. I have an M.A degree in Marriage and Family Therapy from Saybrook University in San Francisco, CA and am licensed in California & Oregon for Psychotherapy sessions. If you are in another state or country and meet specific criteria, we can do private pay coaching.
+          </p>
+
+          <p>
+            I am happy to answer any questions you may have. I have worked in private practice, in hospital and university settings but my favorite is to meet with individual adults online or in groups (sometimes I offer in person groups, retreats or workshops).
+          </p>
+
+        </div>
+      </section>
+
+      <!-- Consultation, rates & insurance (contact bubble–style) -->
+      <section class="consult-section" id="consult">
+        <div class="container consult-inner">
+          <div class="consult-card">
+            <h2 class="section-heading">Consultation, rates &amp; insurance</h2>
+
+            <p class="consult-intro">
+              To see how it feels to work together, you are welcome to schedule a brief online consultation (about 15 minutes, no charge).
+            </p>
+
+            <div class="consult-grid">
+              <div class="consult-block">
+                <h3>Schedule a consultation</h3>
                 <p>
-                  This is placeholder text for Debbie’s bio. You can describe
-                  professional experience, areas of focus, and a bit of personal
-                  context that helps clients know who they’ll be meeting.
+                  Email: <a href="mailto:debbiedevinelmft@proton.me">debbiedevinelmft@proton.me</a>
                 </p>
               </div>
-            </details>
 
-            <!-- Approach -->
-            <details class="info-card" id="approach">
-              <summary>
-                <h3>Therapeutic approach</h3>
-                <p class="summary-line">How sessions feel, and what you can expect.</p>
-              </summary>
-              <div class="info-body">
-                <p>
-                  Use this area to talk about modalities (for example, CBT,
-                  psychodynamic, somatic, trauma-informed) and how Debbie
-                  collaboratively works with clients.
-                </p>
-              </div>
-            </details>
-
-            <!-- Services -->
-            <details class="info-card" id="services">
-              <summary>
-                <h3>Services &amp; specialities</h3>
-                <p class="summary-line">Who she works with and common concerns.</p>
-              </summary>
-              <div class="info-body">
+              <div class="consult-block">
+                <h3>Rates &amp; insurance</h3>
+                <p>I accept the following insurance:</p>
                 <ul>
-                  <li>Individual therapy for adults and teens</li>
-                  <li>Support for grief, trauma, anxiety, and life transitions</li>
-                  <li>In-person and telehealth options</li>
+                  <li>Medicaid (Open card, JCC),</li>
+                  <li>Moda,</li>
+                  <li>Providence,</li>
+                  <li>Regence,</li>
+                  <li>United Behavioral Health</li>
+                  <li>PacificSource (Commercial plans only, not Medicaid)</li>
                 </ul>
                 <p>
-                  All of this is placeholder content that can be swapped for
-                  Debbie’s real offerings.
+                  Private Pay Rate: $200 per 60 minute session
                 </p>
-              </div>
-            </details>
-
-            <!-- Practicalities -->
-            <details class="info-card" id="logistics">
-              <summary>
-                <h3>Fees, insurance &amp; logistics</h3>
-                <p class="summary-line">Session length, payment, and location details.</p>
-              </summary>
-              <div class="info-body">
                 <p>
-                  Outline standard session length, fee ranges, sliding-scale
-                  options, and whether you provide superbills for
-                  out-of-network insurance reimbursement.
+                  I also offer a few reduced rate spots for students and new providers but those slots are currently full. Please request to be added to the waitlist if wanted.
                 </p>
               </div>
-            </details>
 
-            <!-- Getting started -->
-            <details class="info-card" id="getting-started">
-              <summary>
-                <h3>Getting started</h3>
-                <p class="summary-line">What happens between first contact and first session.</p>
-              </summary>
-              <div class="info-body">
+              <div class="consult-block">
+                <h3>Out-of-network support</h3>
                 <p>
-                  Describe how to reach out, what a consultation call looks
-                  like, and how clients can prepare for their first
-                  appointment.
+                  Additionally, I can provide out of network receipts that you may submit (for possible reimbursement) with your insurance company if you have appropriate out of network coverage on your current plan.
                 </p>
               </div>
-            </details>
+            </div>
+
+            <a href="mailto:debbiedevinelmft@proton.me" class="btn primary-btn consult-cta">
+              Email to schedule a consultation
+            </a>
           </div>
         </div>
       </section>
 
-      <!-- Contact strip -->
+      <!-- Testimonials -->
+      <section class="testimonials-section" id="testimonials">
+        <div class="container testimonials-inner">
+          <h2 class="section-heading">Testimonials</h2>
+          <div class="testimonials-list">
+            <p class="testimonial-quote">
+              "Debbie is the epitome of a thoughtful practitioner and I will always credit those early days sitting in circle in her office as the beginning of the hard-earned freedom and agency I experience in my body now" ~Former Group Participant
+            </p>
+
+            <p class="testimonial-quote">
+              "Debbie brings a keen mind, an open heart, and a gentle soulful presence to her work. I recommend her to anyone seeking peace and deep healing in their lives." ~Anita Johnston PhD. Author Eating in the Light of The Moon
+            </p>
+
+            <p class="testimonial-quote">
+              "Debbie has helped me in ways that I just haven't found in a therapist before, I feel like she truly gets what I've been through. She also cracks me up. Highly Recommend!" ~Private Client
+            </p>
+
+            <p class="testimonial-quote">
+              "Working alongside Debbie over the years, I've witnessed her grounded presence, clinical skill, and deep humanity she brings to her work. She creates a space that feels both safe and spacious.-where people can fully be themselves without fear of judgement. Her intuition is matched by thoughtful training, and she meets complexity with steadiness and compassion. When providers refer to her it is because they trust their clients will be seen, held and supported in ways that honor both their dignity and their coals. Anyone seeking care with her is truly in capable hands." Elisabeth Peterson, RDN, CEDS-C 
+            </p>
+
+            <p class="testimonial-quote">
+              "Debbie is a rare fusion of sincere loving warmth, and fierce knowing genius" ~Francie White, Nutritional Psychologist
+            </p>
+
+            <p class="testimonial-quote">
+              "Debbie was there for me when I was grieving that was only matched by my dog. Seriously- I don't know what I would have done without either of them during the hardest time in my life. I friggin love her." ~ Former Client
+            </p>
+
+            <p class="testimonial-quote">
+              "Debbie creates beautiful pathways for safe healing and life-changing inner work. If you are new to IFS, this powerful model for recovery and wellbeing is gentle, empowering and lasting. Debbie is the perfect guide." 
+              ~Amy Pershing Co-Author Binge Eating Disorder: The Journey to Recovery and Beyond
+            </p>
+
+            <p class="testimonial-quote">
+              "Debbie is knowledgeable, wise, lighthearted, and deeply empathic. Her skill and warmth shine through everything she does. I'm so grateful she's in the world, doing this meaningful work" ~Andrea Wachter, LMFT,  C0-Author  Don't Diet Live It! Workbook
+            </p>
+
+            <p class="testimonial-quote">
+              "Debbie is a divine relator. Both grounded and heartfelt, she is a great spaceholder for people's sharings and she has the kind of uncompromising integrity that you know you can trust. Not one to sell out a friend, or dishonor a client. Just what you need in a therapist." ~Jeff Brown, Author Soulshaping 
+            </p>
+
+            <p class="testimonial-quote">
+              "Debbie's warmth, compassionate understanding and humor make her easy to be with and share. She has a genuine presence that makes me feel open, trusting and safe at the same time" ~K.F
+            </p>
+
+            <p class="testimonial-quote">
+              "Working with Debbie is truly a transformative experience. She brings such warmth, authenticity, and deep wisdom. If you're seeking a guide that can support your healing journey with both heart and skill, I cannot recommend Debbie Devine highly enough-she embodies the kind of grace that makes real transformation possible." ~ Jane Brajkovich, LPC
+            </p>
+
+            <p class="testimonial-quote">
+              "Debbie is such a thoughtful, warm, and kind professional. She is committed to her own growth and providing excellent support." ~Jennifer Price,   Painter, Author, Art Therapist, Healing & Liberation Artist
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact strip at the bottom -->
       <section id="contact" class="contact-section" aria-labelledby="contact-heading">
         <div class="container contact-inner">
           <div>
-            <h2 id="contact-heading">Ready to take the next step?</h2>
+            <h2 id="contact-heading">Contact</h2>
             <p class="contact-text">
-              Add Debbie’s preferred contact info here (phone, secure email,
-              client portal link). This can also link to any external
-              scheduling system.
+              You can reach out with questions, to request a consultation, or to learn more about
+              current openings and offerings.
             </p>
           </div>
-          <div class="contact-details">
-            <p class="contact-line"><strong>Phone:</strong> (555) 555-5555</p>
-            <p class="contact-line"><strong>Email:</strong> debbie@example.com</p>
+          <div class="contact-details" aria-label="Contact details">
+            <p class="contact-line">
+              <strong>Debbie Devine LMFT</strong><br />
+              1314 Center Drive B-189<br />
+              Medford OR, 97501
+            </p>
+            <p class="contact-line">
+              <strong>Phone:</strong>
+              <a href="tel:5555555555">(555) 555-5555</a>
+            </p>
+            <p class="contact-line">
+              <strong>Email:</strong>
+              <a href="mailto:debbiedevinelmft@proton.me">debbiedevinelmft@proton.me</a>
+            </p>
           </div>
         </div>
       </section>
+
     </main>
 
     <footer class="site-footer">
       <div class="container footer-inner">
         <p>&copy; <span id="year"></span> Debbie Devine Therapy. All rights reserved.</p>
-        <p class="footer-small">This is a draft layout and placeholder content that can be edited at any time.</p>
+        <p class="footer-small">
+          This is a draft layout and placeholder content that can be edited at any time.
+        </p>
       </div>
-      <script>
-        // Simple helper to always show the current year in the footer
-        document.getElementById('year').textContent = new Date().getFullYear();
-      </script>
     </footer>
+
+    <script>
+      // Footer year
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Procedurally generated floating Xs and Os background
+      (function () {
+        const canvas = document.getElementById('bg-canvas');
+        if (!canvas) return;
+
+        // Respect reduced motion preference
+        const prefersReducedMotion =
+          window.matchMedia &&
+          window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        if (prefersReducedMotion) {
+          canvas.style.display = 'none';
+          return;
+        }
+
+        const ctx = canvas.getContext('2d');
+        let width, height, shapes;
+
+        function resize() {
+          width = canvas.width = window.innerWidth;
+          height = canvas.height = window.innerHeight;
+          initShapes();
+        }
+
+        function initShapes() {
+          const count = Math.floor((width * height) / 30000);
+          shapes = [];
+          for (let i = 0; i < count; i++) {
+            shapes.push({
+              x: Math.random() * width,
+              y: Math.random() * height,
+              size: 12 + Math.random() * 8,
+              speedY: 0.08 + Math.random() * 0.25,
+              speedX: (Math.random() - 0.5) * 0.12,
+              char: Math.random() > 0.5 ? 'X' : 'O',
+              alpha: 0.04 + Math.random() * 0.08,
+              rotation: Math.random() * Math.PI * 2,
+              rotationSpeed: (Math.random() - 0.5) * 0.001
+            });
+          }
+        }
+
+        function draw() {
+          ctx.clearRect(0, 0, width, height);
+
+          for (const s of shapes) {
+            s.y += s.speedY;
+            s.x += s.speedX;
+            s.rotation += s.rotationSpeed;
+
+            if (s.y > height + 40) s.y = -40;
+            if (s.y < -40) s.y = height + 40;
+            if (s.x > width + 40) s.x = -40;
+            if (s.x < -40) s.x = width + 40;
+
+            ctx.save();
+            ctx.translate(s.x, s.y);
+            ctx.rotate(s.rotation);
+            ctx.globalAlpha = s.alpha;
+            ctx.fillStyle = '#60a5fa';
+            ctx.font =
+              s.size +
+              'px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText(s.char, 0, 0);
+            ctx.restore();
+          }
+
+          requestAnimationFrame(draw);
+        }
+
+        resize();
+        window.addEventListener('resize', resize);
+        requestAnimationFrame(draw);
+      })();
+    </script>
+
   </body>
 </html>
