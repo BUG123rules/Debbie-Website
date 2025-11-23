@@ -50,64 +50,80 @@
     </header>
 
     <main>
-      <!-- Welcome text directly under header -->
+      <!-- Welcome section with portrait on the left -->
       <section class="welcome-section floral-section" id="welcome">
-        <div class="container welcome-inner">
-          <h1 class="welcome-title">Welcome</h1>
+        <div class="container welcome-layout">
+          <div class="welcome-image-wrap">
+            <div class="framed-photo framed-photo--portrait">
+              <img src="debbie_pfp.png" alt="Portrait of Debbie Devine, LMFT" />
+            </div>
+          </div>
 
-          <p>
-            Hi, and I’m glad you landed on this page. Sometimes, the only thing harder than reaching out for
-            support is doing nothing.
-          </p>
+          <div class="welcome-inner">
+            <h1 class="welcome-title">Welcome</h1>
 
-          <p>
-            What I mean is that it can take enormous courage to reach out, and if you are here, you may be
-            considering support for yourself or someone you want to refer for trustworthy care.
-          </p>
+            <p>
+              Hi, and I’m glad you landed on this page. Sometimes, the only thing harder than reaching out for
+              support is doing nothing.
+            </p>
 
-          <p>
-            I welcome you to meet with me for a brief, 15-minute online consultation at no charge, just to see
-            how it feels to work together.
-          </p>
+            <p>
+              What I mean is that it can take enormous courage to reach out, and if you are here, you may be
+              considering support for yourself or someone you want to refer for trustworthy care.
+            </p>
 
-          <p>
-            I can be especially helpful if you are a helper too. I see nurses, teachers, therapists, creatives,
-            caregivers, and many others.
-          </p>
+            <p>
+              I welcome you to meet with me for a brief, 15-minute online consultation at no charge, just to see
+              how it feels to work together.
+            </p>
 
-          <p>
-            We can work with many concerns together, including relationship issues, boundaries, compassion
-            fatigue, life transitions, past trauma, and creative expression. I also have extensive training in
-            supporting folks with eating and body image issues.
-          </p>
+            <p>
+              I can be especially helpful if you are a helper too. I see nurses, teachers, therapists, creatives,
+              caregivers, and many others.
+            </p>
 
-          <p>
-            Maybe you don’t see your issue listed here. Let’s chat, and I will tell you honestly if it’s
-            something I am qualified to support you with. I enthusiastically welcome all genders, sexualities,
-            and body sizes. I am curious about you and what brings you here, and I welcome the opportunity to see
-            things from where you are as you move toward feeling more healed and whole in your own process.
-          </p>
+            <p>
+              We can work with many concerns together, including relationship issues, boundaries, compassion
+              fatigue, life transitions, past trauma, and creative expression. I also have extensive training in
+              supporting folks with eating and body image issues.
+            </p>
+
+            <p>
+              Maybe you don’t see your issue listed here. Let’s chat, and I will tell you honestly if it’s
+              something I am qualified to support you with. I enthusiastically welcome all genders, sexualities,
+              and body sizes. I am curious about you and what brings you here, and I welcome the opportunity to see
+              things from where you are as you move toward feeling more healed and whole in your own process.
+            </p>
+          </div>
         </div>
       </section>
 
-      <!-- Training section -->
+      <!-- Training section with nature image on the right -->
       <section class="training-section floral-section" id="training">
-        <div class="container training-inner">
-          <h2 class="section-heading">Training &amp; Professional Background</h2>
+        <div class="container training-layout">
+          <div class="training-inner">
+            <h2 class="section-heading">Training &amp; Professional Background</h2>
 
-          <p>
-            I am trained by the IFS Institute in Internal Family Systems (IFS) therapy and will be trained in
-            EMDR at the beginning of 2026. I have worked relationally and from a client-centered focus since
-            2008. I have an M.A. in Marriage and Family Therapy from Saybrook University in San Francisco, CA,
-            and I am licensed in California and Oregon for psychotherapy sessions. If you are in another state
-            or country and meet specific criteria, we can work together via private-pay coaching.
-          </p>
+            <p>
+              I am trained by the IFS Institute in Internal Family Systems (IFS) therapy and will be trained in
+              EMDR at the beginning of 2026. I have worked relationally and from a client-centered focus since
+              2008. I have an M.A. in Marriage and Family Therapy from Saybrook University in San Francisco, CA,
+              and I am licensed in California and Oregon for psychotherapy sessions. If you are in another state
+              or country and meet specific criteria, we can work together via private-pay coaching.
+            </p>
 
-          <p>
-            I’m happy to answer any questions you may have. I have worked in private practice, hospital, and
-            university settings, but my favorite is meeting with individual adults online or in groups (and
-            sometimes in person through groups, retreats, or workshops).
-          </p>
+            <p>
+              I’m happy to answer any questions you may have. I have worked in private practice, hospital, and
+              university settings, but my favorite is meeting with individual adults online or in groups (and
+              sometimes in person through groups, retreats, or workshops).
+            </p>
+          </div>
+
+          <div class="training-image-wrap">
+            <div class="framed-photo framed-photo--nature">
+              <img src="nature.png" alt="Nature imagery representing growth and healing" />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -322,7 +338,6 @@
         }
 
         function initShapes() {
-          // Slightly more flowers so they stand out on the bright background
           const count = Math.floor((width * height) / 20000);
           shapes = [];
           for (let i = 0; i < count; i++) {
@@ -334,7 +349,7 @@
               speedX: (Math.random() - 0.5) * 0.12,
               char: flowerChars[Math.floor(Math.random() * flowerChars.length)],
               color: flowerColors[Math.floor(Math.random() * flowerColors.length)],
-              alpha: 0.25 + Math.random() * 0.25, // more visible (0.25–0.5)
+              alpha: 0.25 + Math.random() * 0.25,
               rotation: Math.random() * Math.PI * 2,
               rotationSpeed: (Math.random() - 0.5) * 0.001
             });
@@ -365,7 +380,6 @@
             ctx.textAlign = 'center';
             ctx.textBaseline = 'middle';
 
-            // soft glow around each flower
             ctx.shadowColor = s.color;
             ctx.shadowBlur = 14;
 
@@ -376,7 +390,6 @@
           requestAnimationFrame(draw);
         }
 
-        // Debounced resize for performance
         let resizeTimeout;
         function handleResize() {
           clearTimeout(resizeTimeout);

@@ -274,13 +274,53 @@ main {
   width: 100%;
 }
 
+/* ---- Framed photo (used for Debbie portrait & nature image) ---- */
+.framed-photo {
+  position: relative;
+  border-radius: 22px;
+  padding: 4px;
+  background: linear-gradient(135deg, #22c55e, #f97316, #fb7185, #4ade80);
+  box-shadow: var(--shadow-soft);
+}
+
+.framed-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: inherit;
+}
+
+/* subtle tweaks for specific uses if needed */
+.framed-photo--portrait {
+  max-width: 260px;
+}
+
+.framed-photo--nature {
+  max-width: 320px;
+}
+
 /* ---- Welcome section ---- */
 .welcome-section {
   padding: 3rem 0 2.8rem;
   background: transparent;
 }
 
+.welcome-layout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.welcome-image-wrap {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
 .welcome-inner {
+  flex: 1 1 280px;
   max-width: 720px;
   background: rgba(12, 6, 20, 0.78);
   border-radius: var(--radius-lg);
@@ -301,13 +341,28 @@ main {
   background: transparent;
 }
 
+.training-layout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
 .training-inner {
+  flex: 1 1 320px;
   max-width: 760px;
   background: rgba(12, 6, 20, 0.78);
   border-radius: var(--radius-lg);
   border: 2px solid var(--color-border-subtle);
   padding: 1.8rem 2rem;
   box-shadow: var(--shadow-soft);
+}
+
+.training-image-wrap {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 /* ---- Consultation section ---- */
@@ -581,6 +636,24 @@ main {
 }
 
 /* ---- Responsive tweaks ---- */
+@media (max-width: 900px) {
+  .welcome-layout,
+  .training-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .welcome-image-wrap,
+  .training-image-wrap {
+    order: -1; /* show images first on small screens */
+  }
+
+  .welcome-inner,
+  .training-inner {
+    width: 100%;
+  }
+}
+
 @media (max-width: 780px) {
   .header-inner {
     padding: 2rem 0.25rem 2.4rem;
